@@ -1,0 +1,192 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<title></title>
+	<link rel="stylesheet" href="loginEffect.css">
+	
+	
+</head>
+<body>
+	<div class="container">
+		<div class="circle1"></div>
+		<div class="circle2"></div>
+	</div>
+		<div class="All"> TG Genius</div>
+	<form method="POST" name="google-sheet">
+		<h3>Welcome Back
+			<span>Login to you account</span>
+		</h3>
+
+		<label for="name"> Name</label>
+		<input type="Name" placeholder="Name" name="Name" >
+
+		<label for="email"> Email</label>
+		<input type="Email" placeholder="Email" name="Email" >
+
+		<label for="mobile"> Mobile</label>
+		<input type="Mobile" placeholder="Mobile" name="Mobile" >
+	
+		<input type="submit" name="submit" class="button">
+		
+	</form>
+
+
+</body>
+</html>
+
+**----------------------------------Javascript ------------------------**
+
+	<!-- <script>
+            const scriptURL = 'You link'
+            const form = document.forms['google-sheet']
+          
+            form.addEventListener('submit', e => {
+              e.preventDefault()
+              fetch(scriptURL, { method: 'POST', body: new FormData(form)})
+                .then(response => alert("Thanks for Contacting us..! We Will Contact You Soon..."))
+                .catch(error => console.error('Error!', error.message))
+            })
+          </script> -->
+
+*-------------------------------CSS----------------------------**
+
+*, *:before, *:after
+{
+	padding: 0;
+	margin: 0;
+	box-sizing: border-box;
+}
+body
+{
+	background-color: #080710;
+}
+
+.container
+{
+	width: 430px;
+	height: 520px;
+/*	border: 1px solid white;*/
+	position: absolute;
+	transform: translate(-50%,-50%);
+	left: 50%;	
+	top: 50%;
+}
+.container .circle1,.circle2
+{
+	height: 200px;
+	width: 200px;
+	position: absolute;
+	border-radius: 50%;
+}
+.circle1
+{
+	background:linear-gradient(blue,#bf23f6) ;	
+	left: -80px;
+	top: -50px;
+}
+
+.circle2
+{
+	background:linear-gradient(to right,#ff512f,yellow) ;	
+	right: -80px;
+    bottom: -50px;
+}
+.All
+{
+	
+/*	border: 1px solid white;*/
+	
+	position: absolute;
+	color: white;
+	padding-left: 80%;	
+	text-align: right;
+    bottom: 5px;
+}
+form
+{
+	height: 520px;
+	width: 430px;
+	background-color: rgba(255, 255, 255,0.07);
+	position: absolute;
+	transform: translate(-50%,-50%);
+	left: 50%;
+	top: 50%;
+	border-radius: 10px;
+	backdrop-filter: blur(10px);
+	border: 2px solid rgb(255, 255, 255,0.1);
+	box-shadow: 0 0 40px rgba(8, 7, 16,0,6);	
+	padding: 50px 35px;
+}
+
+form *
+{
+	color: white;
+	letter-spacing: 0.5px;
+	outline: none;
+	border: none;
+	
+}
+
+form h3
+{
+	font-size: 32px;
+	font-weight: bold;
+	line-height: 42px;
+	text-align: center;
+}
+
+form h3 span
+{
+	display: block;
+	font-size: 16px;
+	font-weight: 300px;
+}
+label 
+{
+	display: block;
+	margin-top: 30px;
+	font-size: 16px;
+	font-weight: 500px;
+}
+
+input
+{
+	display: block;
+	height: 50px;
+	width: 100%;
+	background-color: rgba(255, 255, 255,0.07);
+	border: none;
+	border-radius: 4px;
+	padding: 0 10px;
+	margin-top: 8px;
+	font-size: 15px;
+	font-weight: 300px;
+
+}
+::placeholder
+{
+	color: #e5e5e5;
+}
+
+.button
+{
+	 cursor: pointer;
+	margin-top: 50px;
+	width: 100%;
+	background-color: white;
+	color: black;
+	height: 45px;
+	padding: 15px 0;
+	font-size: 18px;
+	font-weight: bold;	
+	border-radius: 4px;
+
+}
+
+.button:hover
+{
+	background:linear-gradient(to right,blue, #bf23f6, #ff512f,yellow) ;	
+	color: white;
+}
+
